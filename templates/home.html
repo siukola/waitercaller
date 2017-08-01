@@ -25,10 +25,11 @@
                     <ul class="errors">
                         {% for field_name, field_errors in loginform.errors|dictsort if field_errors %}
 
-                        {% for error in field_errors %}
-                            <li>
-                                {{ error }}
-                            </li>
+                            {% for error in field_errors %}
+                                <li>
+                                    {{ error }}
+                                </li>
+                            {% endfor %}
                         {% endfor %}
                     </ul>
                 {% endif %}
@@ -36,10 +37,10 @@
                 {{ loginform.csrf_token}}
 
                 <div class="form-group">
-                    {{ loginform.email(class="form-control", placeholder="Email Address")}}
+                    {{ loginform.loginemail(class="form-control", placeholder="Email Address")}}
                 </div>
                 <div class="form-group">
-                    {{ loginform.password(class="form-control", placeholder="Password")}}
+                    {{ loginform.loginpassword(class="form-control", placeholder="Password")}}
                 </div>
                 <div class="form-group">
                     {{ loginform.submit(value="Sign in", class="btn btn-success")}}
@@ -126,7 +127,7 @@
                         {{ registrationform.submit(class="btn btn-primary btn-block")}}
                     </div>
                 </div>
-            </form> <!-- /form -->
+            </form>
         </div>
       </div>
     </div>
