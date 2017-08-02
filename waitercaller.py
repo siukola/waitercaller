@@ -1,8 +1,6 @@
 import datetime
-from flask import Flask, redirect, url_for, request
-from flask_login import LoginManager, login_user, logout_user
-from flask import render_template
-from flask_login import login_required, current_user
+from flask import Flask, redirect, url_for, request, render_template
+from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from mockdbhelper import MockDBHelper as DBHelper
 from user import User
 from passwordhelper import PasswordHelper
